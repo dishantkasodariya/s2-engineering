@@ -65,14 +65,14 @@ export default function HeroSection() {
           <div className="mb-12 flex flex-col gap-4 sm:flex-row">
             <Link
               to="/contact"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-base font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30"
+              className="group inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary to-blue-600 px-8 py-4 text-base font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:shadow-primary/30"
             >
               Start Your Project
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
             <button
               type="button"
-              className="group inline-flex items-center justify-center gap-3 rounded-full border border-background/20 bg-background/5 px-8 py-4 text-base font-semibold text-background backdrop-blur-sm transition-all hover:bg-background/10"
+              className="group inline-flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-primary to-blue-600 px-8 py-4 text-base font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:shadow-primary/30"
             >
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-background/20">
                 <Play className="h-4 w-4 fill-current" />

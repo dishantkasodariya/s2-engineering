@@ -133,7 +133,7 @@ const projects = [
   },
   {
     id: 7,
-    title: "North Milliken Avenue Grade Separation",
+    title: "North Milliken Avenue Grade Separation",    
     category: "construction",
     location: "Ontario, CA",
     year: "SANBAG",

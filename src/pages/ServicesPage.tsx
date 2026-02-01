@@ -244,7 +244,7 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group overflow-hidden rounded-2xl border border-border bg-card transition-all hover:shadow-xl"
+                className="group overflow-hidden rounded-3xl border border-border bg-card transition-all hover:shadow-xl"
               >
                 <div className="p-8">
                   <div className="mb-6 flex items-start justify-between">
@@ -368,7 +368,7 @@ export default function ServicesPage() {
             </div>
 
             <div className="relative rounded-2xl bg-muted/50 p-8">
-              <div className="aspect-video rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+              <div className="aspect-video rounded-xl bg-gradient-to-br from-primary to-blue-600 p-8 text-center shadow-2xl lg:p-12">
                 <div className="text-center">
                   <div className="text-6xl font-bold text-primary">50+</div>
                   <div className="text-lg text-muted-foreground">

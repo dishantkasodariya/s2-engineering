@@ -1,273 +1,173 @@
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { cn } from "../lib/utils";
-import {
-  Menu,
-  X,
-  Phone,
-  Mail,
-  Building2,
-  ChevronRight,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-} from "lucide-react";
+'use client';
 
-const navItems = [
-  { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Projects", href: "/projects" },
-  { label: "Contact Us", href: "/contact" },
-];
+import React, { useState, useEffect } from 'react';
+import { Menu, X, Home, Info, Briefcase, FolderOpen, Mail } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
-const socialLinks = [
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Instagram, href: "#", label: "Instagram" },
+const navigation = [
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'About', href: '/about', icon: Info },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'Projects', href: '/projects', icon: FolderOpen },
+  { name: 'Contact', href: '/contact', icon: Mail },
 ];
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-  const pathname = location.pathname;
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setScrolled(window.scrollY > 20);
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
-    return () => {
-      document.body.style.overflow = "unset";
-    };
-  }, [isMobileMenuOpen]);
-
-  useEffect(() => {
-    setIsMobileMenuOpen(false);
-  }, [pathname]);
+    setMobileMenuOpen(false);
+  }, [location.pathname]);
 
   return (
     <>
-      {/* Top Bar */}
-      <div className="hidden bg-foreground text-background lg:block">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-sm">
-          <div className="flex items-center gap-6">
-            <a
-              href="tel:+19093738240"
-              className="flex items-center gap-2 transition-colors hover:text-primary"
-            >
-              <Phone className="h-4 w-4" />
-              <span>(909) 373-8240</span>
-            </a>
-            <a
-              href="mailto:info@s2engineering.com"
-              className="flex items-center gap-2 transition-colors hover:text-primary"
-            >
-              <Mail className="h-4 w-4" />
-              <span>info@s2engineering.com</span>
-            </a>
-          </div>
-          <div className="flex items-center gap-4">
-            {socialLinks.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                className="transition-colors hover:text-primary"
-                aria-label={social.label}
-              >
-                <social.icon className="h-4 w-4" />
-              </a>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Main Header */}
-      <header
-        className={cn(
-          "sticky top-0 z-50 w-full transition-all duration-300",
-          isScrolled
-            ? "bg-background/95 shadow-lg backdrop-blur-md"
-            : "bg-background"
-        )}
-      >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
-          {/* Logo */}
-          <Link to="/" className="group flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary transition-transform group-hover:scale-105">
-              <Building2 className="h-7 w-7 text-primary-foreground" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight text-foreground">
-                S2 Engineering
-              </span>
-              <span className="text-xs font-medium tracking-wider text-muted-foreground">
-                CONSTRUCTION
-              </span>
-            </div>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden items-center gap-1 lg:flex">
-            {navItems.map((item) => (
+      {/* Floating Pill Navbar */}
+      <header className="fixed left-0 right-0 top-4 z-50 px-4 sm:px-6 lg:px-8">
+        <nav
+          className={`mx-auto max-w-6xl rounded-full border bg-white/95 backdrop-blur-lg transition-all duration-300 ${
+            scrolled
+              ? 'border-gray-200/80 shadow-lg shadow-black/[0.03]'
+              : 'border-gray-200/60 shadow-md shadow-black/[0.02]'
+          }`}
+        >
+          <div className="flex items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+            {/* Logo */}
+            <div className="flex items-center">
               <Link
-                key={item.href}
-                to={item.href}
-                className={cn(
-                  "relative px-4 py-2 text-sm font-medium transition-colors",
-                  pathname === item.href
-                    ? "text-primary"
-                    : "text-foreground hover:text-primary"
-                )}
+                to="/"
+                className="flex items-center gap-2 transition-opacity hover:opacity-80"
               >
-                {item.label}
-                {pathname === item.href && (
-                  <span className="absolute bottom-0 left-1/2 h-0.5 w-8 -translate-x-1/2 rounded-full bg-primary" />
-                )}
+                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-primary/80">
+                  <span className="text-sm font-bold text-white">S2</span>
+                </div>
+                <span className="hidden text-base font-semibold text-gray-900 sm:block">
+                  S2 Engineering
+                </span>
               </Link>
-            ))}
-          </nav>
+            </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:shadow-xl hover:shadow-primary/30"
-            >
-              Get a Quote
-              <ChevronRight className="h-4 w-4" />
-            </Link>
+            {/* Desktop Navigation - Center */}
+            <div className="hidden lg:flex lg:items-center lg:gap-1">
+              {navigation.map((item) => {
+                const Icon = item.icon;
+                const isActive = location.pathname === item.href;
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className={`group flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all ${
+                      isActive
+                        ? 'bg-gray-100 text-gray-900'
+                        : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                    }`}
+                  >
+                    <Icon
+                      className={`h-4 w-4 transition-colors ${
+                        isActive
+                          ? 'text-primary'
+                          : 'text-gray-400 group-hover:text-gray-600'
+                      }`}
+                    />
+                    <span>{item.name}</span>
+                  </Link>
+                );
+              })}
+            </div>
+
+            {/* CTA Button - Right */}
+            <div className="hidden lg:flex lg:items-center">
+              <Link
+                to="/contact"
+                className="group relative overflow-hidden rounded-full bg-gradient-to-r from-primary to-primary/90 px-6 py-2.5 text-sm font-semibold text-white shadow-sm shadow-primary/20 transition-all hover:shadow-md hover:shadow-primary/30"
+              >
+                <span className="relative z-10">Get Quote</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary opacity-0 transition-opacity group-hover:opacity-100" />
+              </Link>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <div className="flex lg:hidden">
+              <button
+                type="button"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="inline-flex items-center justify-center rounded-full p-2 text-gray-600 transition-colors hover:bg-gray-100 hover:text-gray-900"
+              >
+                <span className="sr-only">Toggle menu</span>
+                {mobileMenuOpen ? (
+                  <X className="h-5 w-5" />
+                ) : (
+                  <Menu className="h-5 w-5" />
+                )}
+              </button>
+            </div>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(true)}
-            className="rounded-lg p-2 text-foreground transition-colors hover:bg-muted lg:hidden"
-            aria-label="Open menu"
-          >
-            <Menu className="h-6 w-6" />
-          </button>
-        </div>
+        </nav>
       </header>
 
       {/* Mobile Menu Overlay */}
-      <div
-        className={cn(
-          "fixed inset-0 z-50 bg-foreground/60 backdrop-blur-sm transition-opacity lg:hidden",
-          isMobileMenuOpen ? "opacity-100" : "pointer-events-none opacity-0"
-        )}
-        onClick={() => setIsMobileMenuOpen(false)}
-      />
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 z-40 lg:hidden">
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 bg-black/20 backdrop-blur-sm"
+            onClick={() => setMobileMenuOpen(false)}
+          />
 
-      {/* Mobile Menu Drawer */}
-      <div
-        className={cn(
-          "fixed right-0 top-0 z-50 h-full w-80 max-w-[85vw] bg-background shadow-2xl transition-transform duration-300 lg:hidden",
-          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
-        )}
-      >
-        <div className="flex h-full flex-col">
-          {/* Mobile Menu Header */}
-          <div className="flex items-center justify-between border-b border-border p-4">
-            <Link
-              to="/"
-              className="flex items-center gap-2"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
-                <Building2 className="h-5 w-5 text-primary-foreground" />
-              </div>
-              <span className="text-lg font-bold text-foreground">
-                S2 Engineering
-              </span>
-            </Link>
-            <button
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="rounded-lg p-2 text-foreground transition-colors hover:bg-muted"
-              aria-label="Close menu"
-            >
-              <X className="h-6 w-6" />
-            </button>
-          </div>
+          {/* Menu Panel */}
+          <div className="fixed right-4 top-20 w-[calc(100%-2rem)] max-w-sm animate-in slide-in-from-top-4 fade-in duration-200">
+            <div className="overflow-hidden rounded-3xl border border-gray-200/80 bg-white shadow-xl shadow-black/[0.08]">
+              <div className="p-4">
+                {/* Mobile Navigation Links */}
+                <div className="space-y-1">
+                  {navigation.map((item) => {
+                    const Icon = item.icon;
+                    const isActive = location.pathname === item.href;
+                    return (
+                      <Link
+                        key={item.name}
+                        to={item.href}
+                        className={`flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-medium transition-all ${
+                          isActive
+                            ? 'bg-gray-100 text-gray-900'
+                            : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                        }`}
+                      >
+                        <Icon
+                          className={`h-5 w-5 ${
+                            isActive ? 'text-primary' : 'text-gray-400'
+                          }`}
+                        />
+                        <span>{item.name}</span>
+                      </Link>
+                    );
+                  })}
+                </div>
 
-          {/* Mobile Navigation */}
-          <nav className="flex-1 overflow-y-auto p-4">
-            <ul className="space-y-1">
-              {navItems.map((item) => (
-                <li key={item.href}>
+                {/* Mobile CTA */}
+                <div className="mt-4 border-t border-gray-100 pt-4">
                   <Link
-                    to={item.href}
-                    className={cn(
-                      "flex items-center justify-between rounded-lg px-4 py-3 text-base font-medium transition-colors",
-                      pathname === item.href
-                        ? "bg-primary/10 text-primary"
-                        : "text-foreground hover:bg-muted"
-                    )}
-                    onClick={() => setIsMobileMenuOpen(false)}
+                    to="/contact"
+                    className="flex w-full items-center justify-center rounded-full bg-gradient-to-r from-primary to-primary/90 px-6 py-3 text-sm font-semibold text-white shadow-sm shadow-primary/20"
                   >
-                    {item.label}
-                    <ChevronRight className="h-5 w-5 text-muted-foreground" />
+                    Get Quote
                   </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          {/* Mobile Menu Footer */}
-          <div className="border-t border-border p-4">
-            <Link
-              to="/contact"
-              className="flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-base font-semibold text-primary-foreground"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Get a Free Quote
-              <ChevronRight className="h-5 w-5" />
-            </Link>
-
-            <div className="mt-6 space-y-3">
-              <a
-                href="tel:+19093738240"
-                className="flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
-              >
-                <Phone className="h-4 w-4" />
-                (909) 373-8240
-              </a>
-              <a
-                href="mailto:info@s2engineering.com"
-                className="flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
-              >
-                <Mail className="h-4 w-4" />
-                info@s2engineering.com
-              </a>
-            </div>
-
-            <div className="mt-6 flex items-center gap-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-muted-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
-                  aria-label={social.label}
-                >
-                  <social.icon className="h-5 w-5" />
-                </a>
-              ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </>
   );
 }
