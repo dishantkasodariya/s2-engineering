@@ -12,32 +12,32 @@ import {
 
 const stats = [
   {
-    icon: Building,
-    value: 500,
+    icon: Calendar,
+    value: 24,
     suffix: "+",
-    label: "Projects Completed",
-    description: "Successful builds delivered",
-  },
-  {
-    icon: Users,
-    value: 350,
-    suffix: "+",
-    label: "Happy Clients",
-    description: "Satisfied customers served",
+    label: "Years of Excellence",
+    description: "Serving California since 2001",
   },
   {
     icon: Award,
-    value: 45,
+    value: 2,
     suffix: "",
-    label: "Industry Awards",
-    description: "Recognition for excellence",
+    label: "ASCE Awards",
+    description: "2014 Project of the Year",
   },
   {
-    icon: Calendar,
-    value: 28,
-    suffix: "+",
-    label: "Years Experience",
-    description: "Decades of expertise",
+    icon: Building,
+    value: 3,
+    suffix: "",
+    label: "Caltrans Districts",
+    description: "Districts 7, 8, and 11",
+  },
+  {
+    icon: CheckCircle,
+    value: 100,
+    suffix: "%",
+    label: "DBE Certified",
+    description: "Disadvantaged Business Enterprise",
   },
 ];
 

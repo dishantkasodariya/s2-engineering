@@ -10,94 +10,197 @@ import {
   ChevronLeft,
   ChevronRight,
   Building2,
-  Home,
   Factory,
-  Hammer,
 } from "lucide-react";
 
 const categories = [
   { id: "all", label: "All Projects", icon: Building2 },
-  { id: "residential", label: "Residential", icon: Home },
-  { id: "commercial", label: "Commercial", icon: Building2 },
-  { id: "industrial", label: "Industrial", icon: Factory },
-  { id: "renovation", label: "Renovation", icon: Hammer },
+  { id: "construction", label: "Construction Management", icon: Building2 },
+  { id: "materials", label: "Materials Testing", icon: Factory },
 ];
 
 const projects = [
   {
     id: 1,
-    title: "Modern Office Complex",
-    category: "commercial",
-    location: "New York, NY",
-    year: "2024",
+    title: "I-215 Realignment and Widening Project",
+    category: "construction",
+    location: "San Bernardino, CA",
+    year: "SANBAG",
     description:
-      "A state-of-the-art 15-story office building featuring sustainable design, smart building systems, and premium amenities for modern businesses.",
+      "Major freeway realignment and widening project providing construction management and inspection services for SANBAG's high-profile infrastructure improvement.",
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1581094271901-8022df4466f9?q=80&w=800&auto=format&fit=crop",
     images: [
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1581094271901-8022df4466f9?q=80&w=800&auto=format&fit=crop",
     ],
-    specs: ["150,000 sq ft", "15 Floors", "LEED Platinum"],
+    specs: ["SANBAG Project", "Construction Management", "Inspection Services"],
   },
   {
     id: 2,
-    title: "Luxury Waterfront Villa",
-    category: "residential",
-    location: "Miami, FL",
-    year: "2023",
+    title: "I-5 South Corridor CM Services",
+    category: "construction",
+    location: "Los Angeles and Ventura Counties",
+    year: "Caltrans District 7",
     description:
-      "An exquisite waterfront residence featuring panoramic ocean views, infinity pool, and smart home automation throughout.",
+      "Comprehensive construction management services for the I-5 Corridor Improvement Project, one of California's most significant transportation infrastructure initiatives.",
     image:
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop",
     images: [
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop",
     ],
-    specs: ["8,500 sq ft", "5 Bedrooms", "Smart Home"],
+    specs: ["Caltrans District 7", "I-5 Corridor", "CM Services"],
   },
   {
     id: 3,
-    title: "Industrial Distribution Center",
-    category: "industrial",
-    location: "Chicago, IL",
-    year: "2023",
+    title: "I-15 Cajon Pass Pavement Rehabilitation",
+    category: "construction",
+    location: "San Bernardino, CA",
+    year: "Caltrans District 8",
     description:
-      "A massive distribution facility with advanced logistics systems, climate control, and sustainable energy solutions.",
+      "Large-scale pavement rehabilitation project on one of Southern California's most critical highway corridors through the Cajon Pass.",
     image:
-      "https://images.unsplash.com/photo-1565610222536-ef125c59da2e?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop",
     images: [
-      "https://images.unsplash.com/photo-1565610222536-ef125c59da2e?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop",
     ],
-    specs: ["500,000 sq ft", "50 Loading Docks", "Solar Powered"],
+    specs: ["Caltrans District 8", "Pavement Rehab", "I-15 Corridor"],
   },
   {
     id: 4,
-    title: "Historic Hotel Renovation",
-    category: "renovation",
-    location: "Boston, MA",
-    year: "2024",
+    title: "Route 138 Widening and Realignment",
+    category: "construction",
+    location: "Wrightwood & Hesperia, CA",
+    year: "Caltrans District 8",
     description:
-      "Complete restoration and modernization of a 1920s historic hotel, preserving original architecture while adding modern amenities.",
+      "Highway widening and realignment project improving safety and capacity on Route 138 through the High Desert region.",
     image:
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1572819541993-d9305ff41799?q=80&w=800&auto=format&fit=crop",
     images: [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1572819541993-d9305ff41799?q=80&w=800&auto=format&fit=crop",
     ],
-    specs: ["200 Rooms", "Historic Preservation", "5-Star Rating"],
+    specs: ["Caltrans District 8", "Route 138", "Widening Project"],
   },
   {
     id: 5,
-    title: "Retail Shopping Center",
-    category: "commercial",
-    location: "Los Angeles, CA",
-    year: "2023",
+    title: "I-10 Cherry Avenue Interchange Project",
+    category: "construction",
+    location: "Ontario, CA",
+    year: "SANBAG",
     description:
-      "A contemporary shopping destination featuring open-air design, diverse retail spaces, and entertainment venues.",
+      "Major interchange reconstruction project providing improved traffic flow and safety at the I-10 and Cherry Avenue intersection.",
+    image:
+      "https://images.unsplash.com/photo-1587844626431-2b8e452b3ff8?q=80&w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1587844626431-2b8e452b3ff8?q=80&w=800&auto=format&fit=crop",
+    ],
+    specs: ["SANBAG Project", "Interchange", "I-10 Corridor"],
+  },
+  {
+    id: 6,
+    title: "I-10 Citrus Avenue Interchange Project",
+    category: "construction",
+    location: "Fontana, CA",
+    year: "SANBAG",
+    description:
+      "Complete interchange reconstruction enhancing connectivity and traffic management in the rapidly growing Fontana area.",
+    image:
+      "https://images.unsplash.com/photo-1581094271901-8022df4466f9?q=80&w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1581094271901-8022df4466f9?q=80&w=800&auto=format&fit=crop",
+    ],
+    specs: ["SANBAG Project", "Interchange", "I-10 Corridor"],
+  },
+  {
+    id: 7,
+    title: "North Milliken Avenue Grade Separation",
+    category: "construction",
+    location: "Ontario, CA",
+    year: "SANBAG",
+    description:
+      "Grade separation project eliminating at-grade railroad crossings to improve safety and traffic flow.",
+    image:
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=800&auto=format&fit=crop",
+    ],
+    specs: ["SANBAG Project", "Grade Separation", "Rail Crossing"],
+  },
+  {
+    id: 8,
+    title: "I-10 Truck Climbing Lane Addition",
+    category: "construction",
+    location: "Redlands, CA",
+    year: "SANBAG",
+    description:
+      "Addition of truck climbing lanes on I-10 to improve traffic flow and safety in mountainous terrain.",
+    image:
+      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop",
+    ],
+    specs: ["SANBAG Project", "I-10 Corridor", "Climbing Lanes"],
+  },
+  {
+    id: 9,
+    title: "Caltrans District 7 Materials Testing",
+    category: "materials",
+    location: "Los Angeles, CA",
+    year: "Caltrans District 7",
+    description:
+      "On-call materials testing and sampling services for Caltrans District 7, providing comprehensive quality assurance for multiple highway projects.",
+    image:
+      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800&auto=format&fit=crop",
+    ],
+    specs: ["On-Call Services", "Materials Testing", "Above Requirement Rating"],
+  },
+  {
+    id: 10,
+    title: "Caltrans District 8 Materials Testing",
+    category: "materials",
+    location: "San Bernardino, CA",
+    year: "Caltrans District 8",
+    description:
+      "On-call materials testing and sampling services for Caltrans District 8, graded 'Superior' in responsiveness and level of effort.",
+    image:
+      "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=800&auto=format&fit=crop",
+    ],
+    specs: ["On-Call Services", "Materials Testing", "Superior Rating"],
+  },
+  {
+    id: 11,
+    title: "City of Glendale Materials Testing",
+    category: "materials",
+    location: "Glendale, CA",
+    year: "City of Glendale",
+    description:
+      "On-call materials testing services for various city infrastructure projects, ensuring quality and compliance.",
+    image:
+      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800&auto=format&fit=crop",
+    ],
+    specs: ["City Project", "On-Call Services", "QA/QC Testing"],
+  },
+  {
+    id: 12,
+    title: "Bear Valley Road Improvement",
+    category: "materials",
+    location: "Victorville / Apple Valley, CA",
+    year: "City Projects",
+    description:
+      "Materials testing for major road improvement and utility relocation project spanning two cities in the High Desert.",
+    image:
+      "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=800&auto=format&fit=crop",
+    images: [
+      "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=800&auto=format&fit=crop",
+    ],
+    specs: ["Road Improvement", "Utility Relocation", "Materials Testing"],
+  },
+];
     image:
       "https://images.unsplash.com/photo-1519999482648-25049ddd37b1?q=80&w=800&auto=format&fit=crop",
     images: [

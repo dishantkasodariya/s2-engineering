@@ -74,12 +74,12 @@ const team = [
 ];
 
 const milestones = [
-  { year: "2000", event: "S2 Engineering founded in California" },
-  { year: "2005", event: "Expanded to commercial construction" },
-  { year: "2010", event: "Reached 100 completed projects" },
-  { year: "2015", event: "Established major client partnerships" },
-  { year: "2020", event: "Achieved ISO 9001 certification" },
-  { year: "2024", event: "Celebrating excellence in engineering" },
+  { year: "2001", event: "S2 Engineering founded as DBE certified firm" },
+  { year: "2005", event: "Established Caltrans District 8 partnership" },
+  { year: "2010", event: "Expanded to Caltrans District 7 services" },
+  { year: "2014", event: "ASCE LA awards: Construction & Bridge Project of the Year" },
+  { year: "2020", event: "Achieved 'Superior' rating from Caltrans" },
+  { year: "2026", event: "24+ years of engineering excellence" },
 ];
 
 export default function AboutPage() {
@@ -100,12 +100,11 @@ export default function AboutPage() {
             About Us
           </span>
           <h1 className="mb-6 text-balance text-4xl font-bold tracking-tight text-background sm:text-5xl lg:text-6xl">
-            Building Excellence in Engineering
+            Building Excellence Since 2001
           </h1>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-background/70">
-            S2 Engineering has been transforming visions
-            into reality with quality craftsmanship, innovation, and an
-            unwavering commitment to excellence.
+            S2 Engineering, a DBE certified firm, has been transforming California's infrastructure
+            with quality construction management, inspection services, and materials testing.
           </p>
         </div>
       </section>
@@ -119,33 +118,33 @@ export default function AboutPage() {
                 Our Story
               </span>
               <h2 className="mb-6 text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-                From Humble Beginnings to Industry Leaders
+                Award-Winning Excellence in Engineering
               </h2>
               <p className="mb-6 text-lg leading-relaxed text-muted-foreground">
-                What started as a small family business in 1995 has grown into
-                one of the most trusted construction companies in the nation. Our
-                founder, John Anderson, began with a simple mission: to build
-                structures that stand the test of time while exceeding client
-                expectations.
+                Established in 2001, S2 Engineering is a DBE certified firm that provides quality construction
+                management, inspection services, and materials testing for public works projects
+                throughout California. Providing clients with professional and first-rate
+                services with great experience and dexterity is the cornerstone of our business.
               </p>
               <p className="mb-8 text-lg leading-relaxed text-muted-foreground">
-                Today, we've completed over 500 projects, from custom homes to
-                large commercial complexes. Our success is built on the
-                foundation of quality workmanship, transparent communication, and
-                lasting relationships with our clients.
+                Recently, S2 Engineering was bestowed two prestigious awards from ASCE Los Angeles -
+                "Construction Project of the Year" and "Bridge Project of the Year" for 2014,
+                further cementing our commendable reputation in the industry. By having a thorough
+                understanding of each project and the needs of the stakeholders, our professionals
+                take the proactive action necessary to advance each project to its successful completion.
               </p>
               <div className="flex flex-wrap gap-8">
                 <div>
-                  <div className="text-4xl font-bold text-primary">500+</div>
-                  <div className="text-muted-foreground">Projects Completed</div>
+                  <div className="text-4xl font-bold text-primary">24+</div>
+                  <div className="text-muted-foreground">Years of Excellence</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-primary">28+</div>
-                  <div className="text-muted-foreground">Years Experience</div>
+                  <div className="text-4xl font-bold text-primary">2</div>
+                  <div className="text-muted-foreground">ASCE Awards 2014</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-primary">98%</div>
-                  <div className="text-muted-foreground">Client Satisfaction</div>
+                  <div className="text-4xl font-bold text-primary">DBE</div>
+                  <div className="text-muted-foreground">Certified Firm</div>
                 </div>
               </div>
             </div>
@@ -156,7 +155,7 @@ export default function AboutPage() {
                 className="rounded-2xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -left-6 rounded-xl bg-primary p-6 text-primary-foreground shadow-lg">
-                <div className="text-3xl font-bold">1995</div>
+                <div className="text-3xl font-bold">2001</div>
                 <div className="text-sm">Established</div>
               </div>
             </div>
@@ -176,11 +175,10 @@ export default function AboutPage() {
                 Our Mission
               </h3>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                To deliver exceptional construction services that exceed client
-                expectations while maintaining the highest standards of safety,
-                quality, and environmental responsibility. We are committed to
-                building structures that enhance communities and stand as
-                testaments to superior craftsmanship.
+                To provide professional and first-rate construction management, inspection services,
+                and materials testing for public works projects throughout California. We ensure every
+                project complies with all codes and regulatory requirements while maintaining the highest
+                standards of quality, safety, and client satisfaction.
               </p>
             </div>
             <div className="rounded-2xl bg-background p-8 shadow-lg lg:p-10">
@@ -191,11 +189,10 @@ export default function AboutPage() {
                 Our Vision
               </h3>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                To be the most trusted and innovative construction company,
-                recognized for transforming architectural visions into
-                extraordinary realities. We aspire to set industry benchmarks in
-                sustainability, technology adoption, and client satisfaction
-                while fostering a culture of continuous improvement.
+                To be California's most trusted partner for public works projects, recognized for our
+                expertise in construction management and materials testing. We aspire to advance every
+                project to successful completion through thorough understanding of stakeholder needs,
+                proactive problem-solving, and unwavering commitment to excellence.
               </p>
             </div>
           </div>

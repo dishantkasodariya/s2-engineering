@@ -48,12 +48,17 @@ const contactInfo = [
 ];
 
 const services = [
-  "Residential Construction",
-  "Commercial Buildings",
-  "Renovation & Remodeling",
-  "Interior Design",
-  "Project Management",
-  "Architectural Planning",
+  "Construction Management",
+  "Inspection Services",
+  "Materials Testing",
+  "Office Engineering",
+  "Structural Engineering",
+  "Electrical Engineering",
+  "Constructability Reviews",
+  "Quality Assurance",
+  "Project Scheduling",
+  "Storm Water Compliance",
+  "Labor Compliance",
 ];
 
 const socialLinks = [

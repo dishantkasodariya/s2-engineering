@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Play, Shield, Clock, Award } from "lucide-react";
 
 const features = [
-  { icon: Shield, text: "Licensed & Insured" },
-  { icon: Clock, text: "On-Time Delivery" },
-  { icon: Award, text: "Quality Guaranteed" },
+  { icon: Shield, text: "DBE Certified" },
+  { icon: Clock, text: "ASCE Award Winner" },
+  { icon: Award, text: "Superior Rating" },
 ];
 
 export default function HeroSection() {
@@ -28,15 +28,15 @@ export default function HeroSection() {
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 backdrop-blur-sm">
             <span className="h-2 w-2 animate-pulse rounded-full bg-primary" />
             <span className="text-sm font-medium text-primary">
-              Trusted by 500+ Clients Since 1995
+              DBE Certified | Serving California Since 2001
             </span>
           </div>
 
           {/* Heading */}
           <h1 className="mb-6 text-4xl font-bold leading-tight tracking-tight text-background sm:text-5xl md:text-6xl lg:text-7xl">
-            Building Your{" "}
+            Building California's{" "}
             <span className="relative inline-block text-primary">
-              Dreams
+              Infrastructure
               <svg
                 className="absolute -bottom-2 left-0 w-full"
                 viewBox="0 0 200 12"
@@ -51,14 +51,14 @@ export default function HeroSection() {
                 />
               </svg>
             </span>{" "}
-            Into Reality
+            with Excellence
           </h1>
 
           {/* Description */}
           <p className="mb-8 max-w-xl text-lg leading-relaxed text-background/70 md:text-xl">
-            Expert construction services delivering exceptional quality,
-            innovation, and reliability for residential and commercial projects
-            across the nation.
+            Quality construction management, inspection services, and materials testing
+            for public works projects throughout California. Award-winning excellence
+            since 2001.
           </p>
 
           {/* CTA Buttons */}
