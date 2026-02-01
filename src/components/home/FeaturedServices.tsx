@@ -3,24 +3,60 @@ import {
   HardHat,
   FlaskConical,
   ArrowRight,
+  Search,
+  Building2,
+  Zap,
+  ShieldCheck,
 } from "lucide-react";
 
 const services = [
   {
     icon: HardHat,
-    title: "Construction Management and Inspection",
+    title: "Construction Management",
     description:
-      "Quality construction management and inspection services for public works projects throughout California. Our professionals excel in cost estimates, budgets, construction timetables, and ensuring compliance with all codes and regulations.",
+      "Quality construction management for public works projects throughout California. Expert oversight ensuring projects stay on budget, on schedule, and exceed all expectations.",
     color: "bg-primary/10 text-primary",
     hoverColor: "group-hover:bg-primary group-hover:text-white",
   },
   {
-    icon: FlaskConical,
-    title: "Materials Testing Services",
+    icon: Search,
+    title: "Inspection Services",
     description:
-      "High quality materials sampling and testing services for Caltrans and public agencies. We offer comprehensive testing including field testing, laboratory testing, QC/QA projects, and mix design verifications.",
+      "Professional construction inspection services ensuring all projects comply with codes, regulations, and quality standards for SANBAG and Caltrans projects.",
+    color: "bg-blue-500/10 text-blue-600",
+    hoverColor: "group-hover:bg-blue-500 group-hover:text-white",
+  },
+  {
+    icon: FlaskConical,
+    title: "Materials Testing",
+    description:
+      "High quality materials sampling and testing services for Caltrans and public agencies. Graded 'superior' in responsiveness and performance.",
     color: "bg-emerald-500/10 text-emerald-600",
     hoverColor: "group-hover:bg-emerald-500 group-hover:text-white",
+  },
+  {
+    icon: Building2,
+    title: "Structural Engineering",
+    description:
+      "Structural engineering services ensuring safety, stability, and compliance for infrastructure projects throughout California.",
+    color: "bg-purple-500/10 text-purple-600",
+    hoverColor: "group-hover:bg-purple-500 group-hover:text-white",
+  },
+  {
+    icon: Zap,
+    title: "Electrical Engineering",
+    description:
+      "Professional electrical engineering services for transportation and infrastructure projects with comprehensive system design and planning.",
+    color: "bg-amber-500/10 text-amber-600",
+    hoverColor: "group-hover:bg-amber-500 group-hover:text-white",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Quality Assurance",
+    description:
+      "Comprehensive quality assurance programs ensuring projects meet the highest standards of excellence and regulatory compliance.",
+    color: "bg-indigo-500/10 text-indigo-600",
+    hoverColor: "group-hover:bg-indigo-500 group-hover:text-white",
   },
 ];
 
@@ -44,7 +80,7 @@ export default function FeaturedServices() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid gap-6 sm:grid-cols-1 lg:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <div
               key={index}

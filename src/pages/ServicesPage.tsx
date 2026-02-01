@@ -9,41 +9,173 @@ import {
   Truck,
   Key,
   FlaskConical,
+  Building2,
+  FileText,
+  Zap,
+  Search,
+  ShieldCheck,
+  Calendar,
+  Scale,
+  Droplets,
+  Users,
 } from "lucide-react";
 
 const services = [
   {
     icon: HardHat,
-    title: "Construction Management and Inspection Services",
+    title: "Construction Management",
     description:
-      "S2 Engineering has provided quality construction management and construction inspection services for public works projects throughout California, including high-profile projects such as the I-215 Realignment & Widening Project for SANBAG and the I-5 Corridor Improvement Project for Caltrans. We understand that construction managers are the linchpin of construction projects, thus our professionals have vast experience in setting up estimates, budgets & the construction timetable, and developing a construction strategy.",
+      "Comprehensive construction management services for public works projects throughout California, including high-profile projects for SANBAG and Caltrans.",
     features: [
       "Preparation of cost estimates, budgets, and work timetables",
-      "Interpret and explain contracts and technical information to other professionals",
-      "Report work progress and budget matters to clients",
-      "Collaborate with architects, engineers, and other construction specialists",
-      "Select, schedule, and coordinate subcontractor activities",
-      "Respond to work delays, emergencies, and other problems",
-      "Comply with legal requirements, building and safety codes, and other regulations",
+      "Contract interpretation and technical documentation",
+      "Progress reporting and budget management",
+      "Stakeholder collaboration and coordination",
     ],
     color: "bg-primary",
   },
   {
-    icon: FlaskConical,
-    title: "Materials Testing Services",
+    icon: Search,
+    title: "Inspection Services",
     description:
-      "S2 Engineering and its staff have consistently provided high quality materials sampling and testing services to Caltrans and various other public agencies within Caltrans 7, 8, and 11 jurisdictions over the last twelve years. We offer a wide range of testing that varies from sampling, batch plant inspection, field testing, laboratory testing, sampling and testing on QC/QA projects, and mix design verifications.",
+      "Professional construction inspection ensuring all projects comply with codes, regulations, and quality standards.",
     features: [
-      "Materials sampling and batch plant inspection",
-      "Comprehensive field testing services",
-      "Advanced laboratory testing capabilities",
-      "QC/QA project sampling and testing",
-      "Mix design verifications",
-      "Caltrans District 7 and 8 on-call services",
-      "Graded 'above requirement' in cost control and technical performance",
-      "Rated 'superior' in responsiveness and level of effort",
+      "On-site construction inspection",
+      "Quality control monitoring",
+      "Code compliance verification",
+      "Documentation and reporting",
+    ],
+    color: "bg-blue-500",
+  },
+  {
+    icon: FileText,
+    title: "Office Engineering",
+    description:
+      "Expert office engineering support providing technical analysis, documentation, and project coordination services.",
+    features: [
+      "Technical document review",
+      "Project documentation management",
+      "Engineering calculations and analysis",
+      "Coordination with field operations",
     ],
     color: "bg-emerald-500",
+  },
+  {
+    icon: Building2,
+    title: "Structural Engineering",
+    description:
+      "Structural engineering services ensuring safety, stability, and compliance for infrastructure projects.",
+    features: [
+      "Structural design and analysis",
+      "Load calculations and assessments",
+      "Safety compliance verification",
+      "Structural inspection services",
+    ],
+    color: "bg-purple-500",
+  },
+  {
+    icon: Zap,
+    title: "Electrical Engineering",
+    description:
+      "Professional electrical engineering services for transportation and infrastructure projects.",
+    features: [
+      "Electrical system design",
+      "Power distribution planning",
+      "Lighting and signal systems",
+      "Electrical code compliance",
+    ],
+    color: "bg-amber-500",
+  },
+  {
+    icon: ClipboardList,
+    title: "Constructability Reviews",
+    description:
+      "Thorough constructability reviews identifying potential issues and optimizing construction methods before project execution.",
+    features: [
+      "Design review and analysis",
+      "Construction method evaluation",
+      "Cost optimization recommendations",
+      "Risk identification and mitigation",
+    ],
+    color: "bg-rose-500",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Quality Assurance",
+    description:
+      "Comprehensive quality assurance programs ensuring projects meet the highest standards of excellence.",
+    features: [
+      "QA/QC program development",
+      "Quality standards implementation",
+      "Testing and verification",
+      "Continuous quality monitoring",
+    ],
+    color: "bg-indigo-500",
+  },
+  {
+    icon: Calendar,
+    title: "Project Scheduling",
+    description:
+      "Expert project scheduling services keeping projects on track and ensuring timely completion.",
+    features: [
+      "Master schedule development",
+      "Critical path analysis",
+      "Schedule monitoring and updates",
+      "Delay analysis and recovery planning",
+    ],
+    color: "bg-cyan-500",
+  },
+  {
+    icon: Scale,
+    title: "Dispute Resolution",
+    description:
+      "Professional dispute resolution services helping resolve project conflicts efficiently and fairly.",
+    features: [
+      "Conflict analysis and assessment",
+      "Negotiation support",
+      "Documentation and evidence review",
+      "Expert testimony services",
+    ],
+    color: "bg-orange-500",
+  },
+  {
+    icon: Droplets,
+    title: "Storm Water Compliance",
+    description:
+      "Storm water compliance services ensuring projects meet environmental regulations and best practices.",
+    features: [
+      "SWPPP development and implementation",
+      "BMP inspection and monitoring",
+      "Regulatory compliance verification",
+      "Environmental documentation",
+    ],
+    color: "bg-teal-500",
+  },
+  {
+    icon: Users,
+    title: "Labor Compliance",
+    description:
+      "Labor compliance services ensuring adherence to prevailing wage laws and labor regulations.",
+    features: [
+      "Certified payroll review",
+      "Prevailing wage compliance",
+      "Labor law compliance monitoring",
+      "Documentation and reporting",
+    ],
+    color: "bg-pink-500",
+  },
+  {
+    icon: FlaskConical,
+    title: "Materials Testing",
+    description:
+      "High quality materials sampling and testing services for Caltrans and public agencies. Graded 'superior' in responsiveness and performance.",
+    features: [
+      "Materials sampling and batch plant inspection",
+      "Field and laboratory testing",
+      "QC/QA project testing",
+      "Mix design verifications",
+    ],
+    color: "bg-green-500",
   },
 ];
 

@@ -201,31 +201,6 @@ const projects = [
     specs: ["Road Improvement", "Utility Relocation", "Materials Testing"],
   },
 ];
-    image:
-      "https://images.unsplash.com/photo-1519999482648-25049ddd37b1?q=80&w=800&auto=format&fit=crop",
-    images: [
-      "https://images.unsplash.com/photo-1519999482648-25049ddd37b1?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800&auto=format&fit=crop",
-    ],
-    specs: ["300,000 sq ft", "75 Retail Spaces", "Open Air Design"],
-  },
-  {
-    id: 6,
-    title: "Modern Family Residence",
-    category: "residential",
-    location: "Seattle, WA",
-    year: "2024",
-    description:
-      "A contemporary family home featuring sustainable materials, energy-efficient systems, and seamless indoor-outdoor living.",
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
-    images: [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=800&auto=format&fit=crop",
-    ],
-    specs: ["4,200 sq ft", "4 Bedrooms", "Net Zero Energy"],
-  },
-];
 
 export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState("all");
