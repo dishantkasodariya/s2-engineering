@@ -6,9 +6,6 @@ import {
   MapPin,
   Calendar,
   ArrowRight,
-  X,
-  ChevronLeft,
-  ChevronRight,
   Building2,
   Factory,
 } from "lucide-react";
@@ -54,31 +51,31 @@ const projects = [
     id: 3,
     title: "I-15 Cajon Pass Pavement Rehabilitation",
     category: "construction",
-    location: "San Bernardino, CA",
+    location: "Post Mile 15-31, San Bernardino County",
     year: "Caltrans District 8",
     description:
-      "Large-scale pavement rehabilitation project on one of Southern California's most critical highway corridors through the Cajon Pass.",
+      "$120 million Design-Build pilot project under Senate Bill 4, restoring structural integrity and ride quality on I-15 through Cajon Pass. S2 provided construction management and IQA services including CCO processing, claims review, CPM schedule analysis, and comprehensive inspection services.",
     image:
       "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop",
     images: [
       "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop",
     ],
-    specs: ["Caltrans District 8", "Pavement Rehab", "I-15 Corridor"],
+    specs: ["$120 Million Budget", "16-Mile Corridor", "Design-Build SB4"],
   },
   {
     id: 4,
     title: "Route 138 Widening and Realignment",
     category: "construction",
-    location: "Wrightwood & Hesperia, CA",
+    location: "LA County Line to I-15, Wrightwood & Hesperia, CA",
     year: "Caltrans District 8",
     description:
-      "Highway widening and realignment project improving safety and capacity on Route 138 through the High Desert region.",
+      "$30 million, 15-mile highway widening project adding truck climbing lanes and realigning curves for improved sight distance. S2 provided construction inspection and materials testing services, managing 600,000 m³ excavation, 29 drainage systems, and 130,000 tonnes of AC placement.",
     image:
       "https://images.unsplash.com/photo-1572819541993-d9305ff41799?q=80&w=800&auto=format&fit=crop",
     images: [
       "https://images.unsplash.com/photo-1572819541993-d9305ff41799?q=80&w=800&auto=format&fit=crop",
     ],
-    specs: ["Caltrans District 8", "Route 138", "Widening Project"],
+    specs: ["$30 Million Budget", "15-Mile Corridor", "Inspection & Materials Testing"],
   },
   {
     id: 5,
@@ -204,44 +201,11 @@ const projects = [
 
 export default function ProjectsPage() {
   const [activeCategory, setActiveCategory] = useState("all");
-  const [selectedProject, setSelectedProject] = useState<
-    (typeof projects)[0] | null
-  >(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const filteredProjects =
     activeCategory === "all"
       ? projects
       : projects.filter((p) => p.category === activeCategory);
-
-  const openModal = (project: (typeof projects)[0]) => {
-    setSelectedProject(project);
-    setCurrentImageIndex(0);
-    document.body.style.overflow = "hidden";
-  };
-
-  const closeModal = () => {
-    setSelectedProject(null);
-    document.body.style.overflow = "unset";
-  };
-
-  const nextImage = () => {
-    if (selectedProject) {
-      setCurrentImageIndex(
-        (prev) => (prev + 1) % selectedProject.images.length
-      );
-    }
-  };
-
-  const prevImage = () => {
-    if (selectedProject) {
-      setCurrentImageIndex(
-        (prev) =>
-          (prev - 1 + selectedProject.images.length) %
-          selectedProject.images.length
-      );
-    }
-  };
 
   return (
     <>
@@ -293,10 +257,10 @@ export default function ProjectsPage() {
           {/* Projects Grid */}
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {filteredProjects.map((project) => (
-              <div
+              <Link
                 key={project.id}
-                className="group cursor-pointer overflow-hidden rounded-2xl bg-card shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl"
-                onClick={() => openModal(project)}
+                to={`/projects/${project.id}`}
+                className="group overflow-hidden rounded-2xl bg-card shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
@@ -330,119 +294,11 @@ export default function ProjectsPage() {
                     </span>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
-
-      {/* Project Modal */}
-      {selectedProject && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-foreground/80 p-4 backdrop-blur-sm"
-          onClick={closeModal}
-        >
-          <div
-            className="relative max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-2xl bg-background shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* Close Button */}
-            <button
-              onClick={closeModal}
-              className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-background/90 text-foreground shadow-lg transition-colors hover:bg-primary hover:text-primary-foreground"
-              aria-label="Close modal"
-            >
-              <X className="h-5 w-5" />
-            </button>
-
-            {/* Image Gallery */}
-            <div className="relative aspect-video">
-              <img
-                src={selectedProject.images[currentImageIndex] || "/placeholder.svg"}
-                alt={`${selectedProject.title} - Image ${currentImageIndex + 1}`}
-                className="h-full w-full object-cover"
-              />
-              {selectedProject.images.length > 1 && (
-                <>
-                  <button
-                    onClick={prevImage}
-                    className="absolute left-4 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-background/90 text-foreground shadow-lg transition-colors hover:bg-primary hover:text-primary-foreground"
-                    aria-label="Previous image"
-                  >
-                    <ChevronLeft className="h-5 w-5" />
-                  </button>
-                  <button
-                    onClick={nextImage}
-                    className="absolute right-4 top-1/2 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-background/90 text-foreground shadow-lg transition-colors hover:bg-primary hover:text-primary-foreground"
-                    aria-label="Next image"
-                  >
-                    <ChevronRight className="h-5 w-5" />
-                  </button>
-                  <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 gap-2">
-                    {selectedProject.images.map((_, index) => (
-                      <button
-                        key={index}
-                        onClick={() => setCurrentImageIndex(index)}
-                        className={`h-2 rounded-full transition-all ${
-                          index === currentImageIndex
-                            ? "w-6 bg-primary"
-                            : "w-2 bg-background/60"
-                        }`}
-                        aria-label={`Go to image ${index + 1}`}
-                      />
-                    ))}
-                  </div>
-                </>
-              )}
-            </div>
-
-            {/* Content */}
-            <div className="p-8">
-              <div className="mb-4 flex flex-wrap items-center gap-3">
-                <span className="rounded-full bg-primary/10 px-4 py-1 text-sm font-semibold capitalize text-primary">
-                  {selectedProject.category}
-                </span>
-                <span className="flex items-center gap-1 text-sm text-muted-foreground">
-                  <MapPin className="h-4 w-4" />
-                  {selectedProject.location}
-                </span>
-                <span className="flex items-center gap-1 text-sm text-muted-foreground">
-                  <Calendar className="h-4 w-4" />
-                  {selectedProject.year}
-                </span>
-              </div>
-
-              <h2 className="mb-4 text-3xl font-bold text-foreground">
-                {selectedProject.title}
-              </h2>
-              <p className="mb-6 text-lg leading-relaxed text-muted-foreground">
-                {selectedProject.description}
-              </p>
-
-              <div className="mb-6 flex flex-wrap gap-3">
-                {selectedProject.specs.map((spec, index) => (
-                  <span
-                    key={index}
-                    className="rounded-lg bg-muted px-4 py-2 text-sm font-medium text-foreground"
-                  >
-                    {spec}
-                  </span>
-                ))}
-              </div>
-
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-base font-semibold text-primary-foreground transition-all hover:shadow-lg"
-                onClick={closeModal}
-              >
-                Start a Similar Project
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* CTA */}
       <section className="bg-primary py-16">
         <div className="mx-auto max-w-7xl px-4 text-center lg:px-8">
