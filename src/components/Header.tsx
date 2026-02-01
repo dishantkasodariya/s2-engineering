@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X, Home, Info, Briefcase, FolderOpen, Mail } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -35,11 +35,10 @@ export default function Header() {
       {/* Floating Pill Navbar */}
       <header className="fixed left-0 right-0 top-4 z-50 px-4 sm:px-6 lg:px-8">
         <nav
-          className={`mx-auto max-w-6xl rounded-full border bg-white/95 backdrop-blur-lg transition-all duration-300 ${
-            scrolled
+          className={`mx-auto max-w-6xl rounded-full border bg-white/95 backdrop-blur-lg transition-all duration-300 ${scrolled
               ? 'border-gray-200/80 shadow-lg shadow-black/[0.03]'
               : 'border-gray-200/60 shadow-md shadow-black/[0.02]'
-          }`}
+            }`}
         >
           <div className="flex items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
             {/* Logo */}
@@ -66,18 +65,16 @@ export default function Header() {
                   <Link
                     key={item.name}
                     to={item.href}
-                    className={`group flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all ${
-                      isActive
+                    className={`group flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all ${isActive
                         ? 'bg-gray-100 text-gray-900'
                         : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
-                    }`}
+                      }`}
                   >
                     <Icon
-                      className={`h-4 w-4 transition-colors ${
-                        isActive
+                      className={`h-4 w-4 transition-colors ${isActive
                           ? 'text-primary'
                           : 'text-gray-400 group-hover:text-gray-600'
-                      }`}
+                        }`}
                     />
                     <span>{item.name}</span>
                   </Link>
@@ -137,16 +134,14 @@ export default function Header() {
                       <Link
                         key={item.name}
                         to={item.href}
-                        className={`flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-medium transition-all ${
-                          isActive
+                        className={`flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-medium transition-all ${isActive
                             ? 'bg-gray-100 text-gray-900'
                             : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
-                        }`}
+                          }`}
                       >
                         <Icon
-                          className={`h-5 w-5 ${
-                            isActive ? 'text-primary' : 'text-gray-400'
-                          }`}
+                          className={`h-5 w-5 ${isActive ? 'text-primary' : 'text-gray-400'
+                            }`}
                         />
                         <span>{item.name}</span>
                       </Link>
