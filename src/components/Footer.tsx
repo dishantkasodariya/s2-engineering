@@ -59,7 +59,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-bold text-background">
-                  BuildCraft
+                  S2 Engineering
                 </span>
                 <span className="text-xs font-medium tracking-wider text-background/60">
                   CONSTRUCTION
@@ -67,7 +67,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="mb-6 leading-relaxed text-background/70">
-              Building excellence since 1995. We transform visions into reality
+              Expert engineering and construction solutions. We transform visions into reality
               with quality craftsmanship and innovative solutions for all your
               construction needs.
             </p>
@@ -133,31 +133,31 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="https://maps.google.com"
+                  href="https://maps.google.com/?q=8608+Utica+Avenue+Rancho+Cucamonga+CA+91730"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 text-background/70 transition-colors hover:text-primary"
                 >
                   <MapPin className="mt-1 h-5 w-5 shrink-0" />
-                  <span>123 Construction Ave, Building City, BC 12345</span>
+                  <span>8608 Utica Avenue, Rancho Cucamonga, CA 91730</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+19093738240"
                   className="flex items-center gap-3 text-background/70 transition-colors hover:text-primary"
                 >
                   <Phone className="h-5 w-5 shrink-0" />
-                  <span>(123) 456-7890</span>
+                  <span>(909) 373-8240</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:info@buildcraft.com"
+                  href="mailto:info@s2engineering.com"
                   className="flex items-center gap-3 text-background/70 transition-colors hover:text-primary"
                 >
                   <Mail className="h-5 w-5 shrink-0" />
-                  <span>info@buildcraft.com</span>
+                  <span>info@s2engineering.com</span>
                 </a>
               </li>
               <li className="flex items-start gap-3 text-background/70">

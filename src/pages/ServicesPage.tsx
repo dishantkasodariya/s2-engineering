@@ -1,103 +1,49 @@
 import { Link } from "react-router-dom";
 import {
-  Home,
-  Building2,
-  Hammer,
-  Paintbrush,
   HardHat,
-  Ruler,
   ArrowRight,
   CheckCircle,
   ClipboardList,
+  Ruler,
   Cog,
   Truck,
   Key,
+  FlaskConical,
 } from "lucide-react";
 
 const services = [
   {
-    icon: Home,
-    title: "Residential Construction",
+    icon: HardHat,
+    title: "Construction Management and Inspection Services",
     description:
-      "Custom homes and residential developments built to your specifications with premium materials and exceptional craftsmanship.",
+      "S2 Engineering has provided quality construction management and construction inspection services for public works projects throughout California, including high-profile projects such as the I-215 Realignment & Widening Project for SANBAG and the I-5 Corridor Improvement Project for Caltrans. We understand that construction managers are the linchpin of construction projects, thus our professionals have vast experience in setting up estimates, budgets & the construction timetable, and developing a construction strategy.",
     features: [
-      "Custom home design & build",
-      "Multi-family developments",
-      "Luxury estates",
-      "Sustainable green building",
-      "Smart home integration",
-    ],
-    color: "bg-blue-500",
-  },
-  {
-    icon: Building2,
-    title: "Commercial Construction",
-    description:
-      "Modern commercial spaces designed for functionality, aesthetics, and long-term value for your business success.",
-    features: [
-      "Office buildings",
-      "Retail spaces",
-      "Warehouses & industrial",
-      "Healthcare facilities",
-      "Educational institutions",
+      "Preparation of cost estimates, budgets, and work timetables",
+      "Interpret and explain contracts and technical information to other professionals",
+      "Report work progress and budget matters to clients",
+      "Collaborate with architects, engineers, and other construction specialists",
+      "Select, schedule, and coordinate subcontractor activities",
+      "Respond to work delays, emergencies, and other problems",
+      "Comply with legal requirements, building and safety codes, and other regulations",
     ],
     color: "bg-primary",
   },
   {
-    icon: Hammer,
-    title: "Renovation & Remodeling",
+    icon: FlaskConical,
+    title: "Materials Testing Services",
     description:
-      "Transform your existing space with expert renovation services that breathe new life into any property.",
+      "S2 Engineering and its staff have consistently provided high quality materials sampling and testing services to Caltrans and various other public agencies within Caltrans 7, 8, and 11 jurisdictions over the last twelve years. We offer a wide range of testing that varies from sampling, batch plant inspection, field testing, laboratory testing, sampling and testing on QC/QA projects, and mix design verifications.",
     features: [
-      "Kitchen & bathroom remodels",
-      "Room additions",
-      "Historic restoration",
-      "Accessibility modifications",
-      "Energy efficiency upgrades",
+      "Materials sampling and batch plant inspection",
+      "Comprehensive field testing services",
+      "Advanced laboratory testing capabilities",
+      "QC/QA project sampling and testing",
+      "Mix design verifications",
+      "Caltrans District 7 and 8 on-call services",
+      "Graded 'above requirement' in cost control and technical performance",
+      "Rated 'superior' in responsiveness and level of effort",
     ],
     color: "bg-emerald-500",
-  },
-  {
-    icon: Paintbrush,
-    title: "Interior Design",
-    description:
-      "Creative interior solutions that combine style with practicality for spaces that inspire and function beautifully.",
-    features: [
-      "Space planning",
-      "Material selection",
-      "Custom millwork",
-      "Lighting design",
-      "Furniture coordination",
-    ],
-    color: "bg-purple-500",
-  },
-  {
-    icon: HardHat,
-    title: "Project Management",
-    description:
-      "Expert oversight ensuring your project stays on budget, on schedule, and exceeds all expectations.",
-    features: [
-      "Budget management",
-      "Schedule coordination",
-      "Quality control",
-      "Subcontractor management",
-      "Progress reporting",
-    ],
-    color: "bg-amber-500",
-  },
-  {
-    icon: Ruler,
-    title: "Architectural Planning",
-    description:
-      "Comprehensive architectural services from concept to completion with attention to every detail.",
-    features: [
-      "Conceptual design",
-      "3D visualization",
-      "Construction documents",
-      "Permit acquisition",
-      "Site analysis",
-    ],
-    color: "bg-rose-500",
   },
 ];
 

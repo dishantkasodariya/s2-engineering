@@ -1,62 +1,26 @@
 import { Link } from "react-router-dom";
 import {
-  Home,
-  Building2,
-  Hammer,
-  Paintbrush,
   HardHat,
-  Ruler,
+  FlaskConical,
   ArrowRight,
 } from "lucide-react";
 
 const services = [
   {
-    icon: Home,
-    title: "Residential Construction",
+    icon: HardHat,
+    title: "Construction Management and Inspection",
     description:
-      "Custom homes and residential developments built to your specifications with premium materials and craftsmanship.",
-    color: "bg-blue-500/10 text-blue-600",
-    hoverColor: "group-hover:bg-blue-500 group-hover:text-white",
-  },
-  {
-    icon: Building2,
-    title: "Commercial Buildings",
-    description:
-      "Modern commercial spaces designed for functionality, aesthetics, and long-term value for your business.",
+      "Quality construction management and inspection services for public works projects throughout California. Our professionals excel in cost estimates, budgets, construction timetables, and ensuring compliance with all codes and regulations.",
     color: "bg-primary/10 text-primary",
     hoverColor: "group-hover:bg-primary group-hover:text-white",
   },
   {
-    icon: Hammer,
-    title: "Renovation & Remodeling",
+    icon: FlaskConical,
+    title: "Materials Testing Services",
     description:
-      "Transform your existing space with expert renovation services that breathe new life into any property.",
+      "High quality materials sampling and testing services for Caltrans and public agencies. We offer comprehensive testing including field testing, laboratory testing, QC/QA projects, and mix design verifications.",
     color: "bg-emerald-500/10 text-emerald-600",
     hoverColor: "group-hover:bg-emerald-500 group-hover:text-white",
-  },
-  {
-    icon: Paintbrush,
-    title: "Interior Design",
-    description:
-      "Creative interior solutions that combine style with practicality for spaces that inspire.",
-    color: "bg-purple-500/10 text-purple-600",
-    hoverColor: "group-hover:bg-purple-500 group-hover:text-white",
-  },
-  {
-    icon: HardHat,
-    title: "Project Management",
-    description:
-      "Expert oversight ensuring your project stays on budget, on schedule, and exceeds expectations.",
-    color: "bg-amber-500/10 text-amber-600",
-    hoverColor: "group-hover:bg-amber-500 group-hover:text-white",
-  },
-  {
-    icon: Ruler,
-    title: "Architectural Planning",
-    description:
-      "Comprehensive architectural services from concept to completion with attention to every detail.",
-    color: "bg-rose-500/10 text-rose-600",
-    hoverColor: "group-hover:bg-rose-500 group-hover:text-white",
   },
 ];
 
@@ -80,7 +44,7 @@ export default function FeaturedServices() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-1 lg:grid-cols-2">
           {services.map((service, index) => (
             <div
               key={index}
@@ -117,7 +81,7 @@ export default function FeaturedServices() {
         {/* View All Link */}
         <div className="mt-12 text-center">
           <Link
-            href="/services"
+            to="/services"
             className="inline-flex items-center gap-2 rounded-full border-2 border-primary bg-transparent px-8 py-3 text-base font-semibold text-primary transition-all hover:bg-primary hover:text-primary-foreground"
           >
             View All Services

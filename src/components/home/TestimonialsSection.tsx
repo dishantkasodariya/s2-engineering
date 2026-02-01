@@ -10,7 +10,7 @@ const testimonials = [
     image:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop",
     content:
-      "BuildCraft transformed our vision into reality. Their attention to detail and commitment to excellence exceeded our expectations. The new office space has boosted our team's productivity significantly.",
+      "S2 Engineering transformed our vision into reality. Their attention to detail and commitment to excellence exceeded our expectations. The new office space has boosted our team's productivity significantly.",
     rating: 5,
     project: "Modern Office Complex",
   },
@@ -20,7 +20,7 @@ const testimonials = [
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop",
     content:
-      "Building our dream home was a seamless experience with BuildCraft. They listened to every detail and delivered a home that perfectly reflects our family's lifestyle. Couldn't be happier!",
+      "Building our dream home was a seamless experience with S2 Engineering. They listened to every detail and delivered a home that perfectly reflects our family's lifestyle. Couldn't be happier!",
     rating: 5,
     project: "Custom Family Residence",
   },
@@ -30,7 +30,7 @@ const testimonials = [
     image:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop",
     content:
-      "Professional, punctual, and precise. BuildCraft delivered our retail space on time and within budget. Their project management skills are second to none in the industry.",
+      "Professional, punctual, and precise. S2 Engineering delivered our retail space on time and within budget. Their project management skills are second to none in the industry.",
     rating: 5,
     project: "Shopping Center Renovation",
   },
@@ -40,7 +40,7 @@ const testimonials = [
     image:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&auto=format&fit=crop",
     content:
-      "We've worked with many construction firms, but BuildCraft stands out for their quality and reliability. They've become our go-to partner for all our development projects.",
+      "We've worked with many construction firms, but S2 Engineering stands out for their quality and reliability. They've become our go-to partner for all our development projects.",
     rating: 5,
     project: "Multi-Unit Development",
   },

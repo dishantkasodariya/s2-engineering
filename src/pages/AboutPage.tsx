@@ -6,7 +6,6 @@ import {
   Shield,
   Users,
   Award,
-  CheckCircle,
   ArrowRight,
   Linkedin,
   Twitter,
@@ -75,12 +74,12 @@ const team = [
 ];
 
 const milestones = [
-  { year: "1995", event: "BuildCraft founded in New York" },
-  { year: "2000", event: "Expanded to commercial construction" },
-  { year: "2008", event: "Reached 100 completed projects" },
-  { year: "2015", event: "Opened offices in 5 major cities" },
+  { year: "2000", event: "S2 Engineering founded in California" },
+  { year: "2005", event: "Expanded to commercial construction" },
+  { year: "2010", event: "Reached 100 completed projects" },
+  { year: "2015", event: "Established major client partnerships" },
   { year: "2020", event: "Achieved ISO 9001 certification" },
-  { year: "2024", event: "Celebrating 500+ successful projects" },
+  { year: "2024", event: "Celebrating excellence in engineering" },
 ];
 
 export default function AboutPage() {
@@ -101,10 +100,10 @@ export default function AboutPage() {
             About Us
           </span>
           <h1 className="mb-6 text-balance text-4xl font-bold tracking-tight text-background sm:text-5xl lg:text-6xl">
-            Building Excellence Since 1995
+            Building Excellence in Engineering
           </h1>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-background/70">
-            For nearly three decades, BuildCraft has been transforming visions
+            S2 Engineering has been transforming visions
             into reality with quality craftsmanship, innovation, and an
             unwavering commitment to excellence.
           </p>

@@ -65,18 +65,18 @@ export default function Header() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-sm">
           <div className="flex items-center gap-6">
             <a
-              href="tel:+1234567890"
+              href="tel:+19093738240"
               className="flex items-center gap-2 transition-colors hover:text-primary"
             >
               <Phone className="h-4 w-4" />
-              <span>(123) 456-7890</span>
+              <span>(909) 373-8240</span>
             </a>
             <a
-              href="mailto:info@buildcraft.com"
+              href="mailto:info@s2engineering.com"
               className="flex items-center gap-2 transition-colors hover:text-primary"
             >
               <Mail className="h-4 w-4" />
-              <span>info@buildcraft.com</span>
+              <span>info@s2engineering.com</span>
             </a>
           </div>
           <div className="flex items-center gap-4">
@@ -111,7 +111,7 @@ export default function Header() {
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold tracking-tight text-foreground">
-                BuildCraft
+                S2 Engineering
               </span>
               <span className="text-xs font-medium tracking-wider text-muted-foreground">
                 CONSTRUCTION
@@ -190,7 +190,7 @@ export default function Header() {
                 <Building2 className="h-5 w-5 text-primary-foreground" />
               </div>
               <span className="text-lg font-bold text-foreground">
-                BuildCraft
+                S2 Engineering
               </span>
             </Link>
             <button
@@ -238,18 +238,18 @@ export default function Header() {
 
             <div className="mt-6 space-y-3">
               <a
-                href="tel:+1234567890"
+                href="tel:+19093738240"
                 className="flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 <Phone className="h-4 w-4" />
-                (123) 456-7890
+                (909) 373-8240
               </a>
               <a
-                href="mailto:info@buildcraft.com"
+                href="mailto:info@s2engineering.com"
                 className="flex items-center gap-3 text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 <Mail className="h-4 w-4" />
-                info@buildcraft.com
+                info@s2engineering.com
               </a>
             </div>
 
