@@ -244,37 +244,37 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group overflow-hidden rounded-3xl border border-border bg-card transition-all hover:shadow-xl"
+                className="bg-card block p-6 border border-border rounded-lg shadow-sm"
               >
-                <div className="p-8">
-                  <div className="mb-6 flex items-start justify-between">
-                    <div
-                      className={`inline-flex h-14 w-14 items-center justify-center rounded-xl ${service.color} text-white`}
-                    >
-                      <service.icon className="h-7 w-7" />
-                    </div>
-                    <ArrowRight className="h-6 w-6 text-muted-foreground opacity-0 transition-all group-hover:translate-x-1 group-hover:opacity-100" />
-                  </div>
-
-                  <h3 className="mb-3 text-2xl font-bold text-foreground">
-                    {service.title}
-                  </h3>
-                  <p className="mb-6 text-muted-foreground">
-                    {service.description}
-                  </p>
-
-                  <ul className="space-y-3">
-                    {service.features.map((feature, featureIndex) => (
-                      <li
-                        key={featureIndex}
-                        className="flex items-center gap-3 text-foreground"
-                      >
-                        <CheckCircle className="h-5 w-5 shrink-0 text-primary" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <div
+                  className={`mb-6 inline-flex h-14 w-14 items-center justify-center rounded-lg ${service.color} text-white`}
+                >
+                  <service.icon className="h-7 w-7" />
                 </div>
+
+                <h3 className="mb-3 text-2xl font-bold text-foreground">
+                  {service.title}
+                </h3>
+                <p className="mb-6 text-muted-foreground">
+                  {service.description}
+                </p>
+
+                <ul className="space-y-3 mb-6">
+                  {service.features.map((feature, featureIndex) => (
+                    <li
+                      key={featureIndex}
+                      className="flex items-center gap-3 text-muted-foreground"
+                    >
+                      <CheckCircle className="h-5 w-5 shrink-0 text-primary" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <button className="inline-flex items-center text-foreground bg-muted box-border border border-border hover:bg-muted/80 hover:text-foreground focus:ring-4 focus:ring-muted/50 shadow-sm font-medium leading-5 rounded-lg text-sm px-4 py-2.5 focus:outline-none transition-all">
+                  Learn more
+                  <ArrowRight className="w-4 h-4 ms-1.5 rtl:rotate-180 -me-0.5" />
+                </button>
               </div>
             ))}
           </div>

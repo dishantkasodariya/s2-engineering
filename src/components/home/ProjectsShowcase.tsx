@@ -60,57 +60,40 @@ export default function ProjectsShowcase() {
           </Link>
         </div>
 
-        {/* Projects Grid - Bento Style */}
+        {/* Projects Grid */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <Link
+            <div
               key={index}
-              to="/projects"
-              className={`group relative overflow-hidden rounded-2xl ${
-                index === 0 ? "md:col-span-2 md:row-span-2" : ""
-              }`}
+              className="bg-card block max-w-sm p-6 border border-border rounded-lg shadow-sm"
             >
-              {/* Image */}
-              <div
-                className={`relative ${
-                  index === 0
-                    ? "aspect-[4/3] md:aspect-auto md:h-full"
-                    : "aspect-[4/3]"
-                }`}
-              >
+              <Link to="/projects">
                 <img
+                  className="rounded-lg w-full h-auto"
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/20 to-transparent opacity-80 transition-opacity group-hover:opacity-90" />
-
-                {/* Content */}
-                <div className="absolute inset-0 flex flex-col justify-end p-6">
-                  <span className="mb-2 w-fit rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
-                    {project.category}
-                  </span>
-                  <h3
-                    className={`mb-2 font-bold text-background ${
-                      index === 0 ? "text-2xl md:text-3xl" : "text-xl"
-                    }`}
-                  >
-                    {project.title}
-                  </h3>
-                  <div className="flex items-center gap-2 text-sm text-background/80">
-                    <MapPin className="h-4 w-4" />
-                    {project.location}
-                  </div>
-
-                  {/* Hover Arrow */}
-                  <div className="mt-4 flex items-center gap-2 text-primary opacity-0 transition-all group-hover:opacity-100">
-                    <span className="text-sm font-semibold">View Project</span>
-                    <ArrowRight className="h-4 w-4" />
-                  </div>
-                </div>
+              </Link>
+              <Link to="/projects">
+                <h5 className="mt-6 mb-2 text-2xl font-semibold tracking-tight text-foreground">
+                  {project.title}
+                </h5>
+              </Link>
+              <p className="mb-4 text-muted-foreground">
+                {project.category} project located in {project.location}
+              </p>
+              <div className="flex items-center gap-2 mb-6 text-sm text-muted-foreground">
+                <MapPin className="h-4 w-4" />
+                {project.location}
               </div>
-            </Link>
+              <Link
+                to="/projects"
+                className="inline-flex items-center text-foreground bg-muted box-border border border-border hover:bg-muted/80 hover:text-foreground focus:ring-4 focus:ring-muted/50 shadow-sm font-medium leading-5 rounded-lg text-sm px-4 py-2.5 focus:outline-none transition-all"
+              >
+                Read more
+                <ArrowRight className="w-4 h-4 ms-1.5 rtl:rotate-180 -me-0.5" />
+              </Link>
+            </div>
           ))}
         </div>
       </div>

@@ -257,44 +257,41 @@ export default function ProjectsPage() {
           {/* Projects Grid */}
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {filteredProjects.map((project) => (
-              <Link
+              <div
                 key={project.id}
-                to={`/projects/${project.id}`}
-                className="group overflow-hidden rounded-2xl bg-card shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl"
+                className="bg-card block max-w-sm p-6 border border-border rounded-lg shadow-sm"
               >
-                <div className="relative aspect-4/3 overflow-hidden rounded-t-xl">
+                <Link to={`/projects/${project.id}`}>
                   <img
+                    className="rounded-lg w-full h-auto"
                     src={project.image}
                     alt={project.title}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 translate-y-4 opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
-                    <span className="inline-flex items-center gap-2 text-sm font-semibold text-primary">
-                      View Details
-                      <ArrowRight className="h-4 w-4" />
-                    </span>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <span className="mb-2 inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold capitalize text-primary">
-                    {project.category}
-                  </span>
-                  <h3 className="mb-2 text-xl font-bold text-foreground">
+                </Link>
+                <Link to={`/projects/${project.id}`}>
+                  <h5 className="mt-6 mb-2 text-2xl font-semibold tracking-tight text-foreground">
                     {project.title}
-                  </h3>
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                    <span className="flex items-center gap-1">
-                      <MapPin className="h-4 w-4" />
-                      {project.location}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Calendar className="h-4 w-4" />
-                      {project.year}
-                    </span>
-                  </div>
+                  </h5>
+                </Link>
+                <p className="mb-4 text-muted-foreground">{project.description}</p>
+                <div className="flex items-center gap-4 mb-6 text-sm text-muted-foreground">
+                  <span className="flex items-center gap-1">
+                    <MapPin className="h-4 w-4" />
+                    {project.location}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Calendar className="h-4 w-4" />
+                    {project.year}
+                  </span>
                 </div>
-              </Link>
+                <Link
+                  to={`/projects/${project.id}`}
+                  className="inline-flex items-center text-foreground bg-muted box-border border border-border hover:bg-muted/80 hover:text-foreground focus:ring-4 focus:ring-muted/50 shadow-sm font-medium leading-5 rounded-lg text-sm px-4 py-2.5 focus:outline-none transition-all"
+                >
+                  Read more
+                  <ArrowRight className="w-4 h-4 ms-1.5 rtl:rotate-180 -me-0.5" />
+                </Link>
+              </div>
             ))}
           </div>
         </div>

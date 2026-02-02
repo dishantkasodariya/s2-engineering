@@ -218,14 +218,14 @@ export default function ContactPage() {
             {contactInfo.map((info, index) => (
               <div
                 key={index}
-                className="group rounded-2xl border border-border bg-card p-5 transition-all hover:-translate-y-1 hover:shadow-lg sm:p-6"
+                className="bg-card block p-6 border border-border rounded-lg shadow-sm"
               >
                 <div
-                  className={`mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl sm:mb-4 sm:h-12 sm:w-12 ${info.color}`}
+                  className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg ${info.color}`}
                 >
-                  <info.icon className="h-5 w-5 sm:h-6 sm:w-6" />
+                  <info.icon className="h-6 w-6" />
                 </div>
-                <h3 className="mb-2 text-base font-semibold text-foreground sm:text-lg">
+                <h3 className="mb-2 text-lg font-semibold text-foreground">
                   {info.title}
                 </h3>
                 {info.details.map((detail, i) =>
@@ -233,7 +233,7 @@ export default function ContactPage() {
                     <a
                       key={i}
                       href={info.href}
-                      className="block text-sm text-muted-foreground transition-colors hover:text-primary"
+                      className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
                     >
                       {detail}
                     </a>
