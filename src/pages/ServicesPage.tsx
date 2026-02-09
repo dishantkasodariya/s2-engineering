@@ -224,7 +224,8 @@ export default function ServicesPage() {
           />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 text-center lg:px-8">
-          <span className="mb-4 inline-block rounded-full bg-primary/20 px-4 py-1.5 text-sm font-semibold text-primary">
+          <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary/20 px-4 py-1.5 text-sm font-semibold text-primary">
+            <HardHat className="h-4 w-4" />
             Our Services
           </span>
           <h1 className="mb-6 text-balance text-4xl font-bold tracking-tight text-background sm:text-5xl lg:text-6xl">

@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap");
 @import "tailwindcss";
 
 @theme inline {
-  --font-sans: "Inter", "Inter Fallback", system-ui, sans-serif;
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --font-display: "Playfair Display", "Times New Roman", serif;
   --font-mono: "JetBrains Mono", monospace;
 
   --color-background: oklch(1 0 0);
@@ -37,6 +39,16 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
   }
 }
 

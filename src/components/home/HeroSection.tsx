@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BadgeCheck } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -31,8 +31,8 @@ export default function HeroSection() {
       </svg>
 
       {/* Content */}
-      <div className="relative z-10 flex items-center mt-32 gap-2 border border-slate-600 text-gray-50 rounded-full px-4 py-2">
-        <div className="size-2.5 bg-green-500 rounded-full" />
+      <div className="relative z-10 mt-32 inline-flex items-center gap-2 rounded-full border border-slate-600 px-4 py-2 text-gray-50">
+        <BadgeCheck className="h-4 w-4 text-emerald-300" />
         <span>DBE Certified | Serving California Since 2001</span>
       </div>
 

@@ -96,7 +96,8 @@ export default function AboutPage() {
           />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 text-center lg:px-8">
-          <span className="mb-4 inline-block rounded-full bg-primary/20 px-4 py-1.5 text-sm font-semibold text-primary">
+          <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary/20 px-4 py-1.5 text-sm font-semibold text-primary">
+            <Shield className="h-4 w-4" />
             About Us
           </span>
           <h1 className="mb-6 text-balance text-4xl font-bold tracking-tight text-background sm:text-5xl lg:text-6xl">
@@ -238,21 +239,25 @@ export default function AboutPage() {
       <section className="bg-foreground py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="mx-auto mb-16 max-w-2xl text-center">
-            <span className="mb-4 inline-block rounded-full bg-primary/20 px-4 py-1.5 text-sm font-semibold text-primary">
+            <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary/20 px-4 py-1.5 text-sm font-semibold text-primary">
+              <Award className="h-4 w-4" />
               Our Journey
             </span>
             <h2 className="mb-4 text-balance text-3xl font-bold tracking-tight text-background sm:text-4xl">
               Milestones & Achievements
             </h2>
+            <p className="text-lg leading-relaxed text-background/70">
+              A quick look at the moments that shaped our growth and recognition across California.
+            </p>
           </div>
 
           <div className="relative">
-            <div className="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-primary/30 md:block hidden" />
-            <div className="space-y-8">
+            <div className="absolute left-1/2 top-0 hidden h-full w-0.5 -translate-x-1/2 bg-gradient-to-b from-primary/0 via-primary/40 to-primary/0 md:block" />
+            <div className="space-y-10">
               {milestones.map((milestone, index) => (
                 <div
                   key={index}
-                  className={`flex items-center gap-8 ${
+                  className={`flex flex-col gap-4 md:items-center ${
                     index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                   }`}
                 >
@@ -261,14 +266,24 @@ export default function AboutPage() {
                       index % 2 === 0 ? "md:text-right" : "md:text-left"
                     }`}
                   >
-                    <div className="inline-block rounded-2xl bg-background/10 p-6 backdrop-blur-sm">
-                      <div className="text-2xl font-bold text-primary">
+                    <div className="group inline-flex w-full max-w-xl flex-col gap-3 rounded-2xl border border-background/10 bg-background/5 p-6 shadow-lg backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-primary/40 hover:bg-background/10">
+                      <div
+                        className={`flex items-center gap-3 text-xs font-semibold uppercase tracking-wide text-primary ${
+                          index % 2 === 0 ? "md:justify-end" : "md:justify-start"
+                        }`}
+                      >
+                        <Award className="h-4 w-4" />
+                        Milestone
+                      </div>
+                      <div className="text-3xl font-bold text-primary">
                         {milestone.year}
                       </div>
-                      <div className="text-background/80">{milestone.event}</div>
+                      <p className="text-background/80">{milestone.event}</p>
                     </div>
                   </div>
-                  <div className="relative z-10 hidden h-4 w-4 rounded-full bg-primary ring-4 ring-background md:block" />
+                  <div className="relative z-10 hidden h-12 w-12 items-center justify-center rounded-full border border-primary/40 bg-foreground text-primary shadow-lg md:flex">
+                    <Award className="h-5 w-5" />
+                  </div>
                   <div className="flex-1" />
                 </div>
               ))}

@@ -1,5 +1,5 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { ArrowLeft, MapPin, Calendar, ArrowRight } from "lucide-react";
+import { ArrowLeft, MapPin, Calendar, ArrowRight, FolderKanban } from "lucide-react";
 
 const projects = [
   {
@@ -270,7 +270,8 @@ export default function ProjectDetailPage() {
           </button>
           
           <div className="mb-4 flex flex-wrap items-center gap-3">
-            <span className="rounded-full bg-primary/20 px-4 py-1 text-sm font-semibold capitalize text-primary">
+            <span className="inline-flex items-center gap-2 rounded-full bg-primary/20 px-4 py-1 text-sm font-semibold capitalize text-primary">
+              <FolderKanban className="h-4 w-4" />
               {project.category}
             </span>
             <span className="flex items-center gap-1 text-sm text-background/70">

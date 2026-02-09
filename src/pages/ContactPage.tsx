@@ -198,7 +198,8 @@ export default function ContactPage() {
           />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-          <span className="mb-3 inline-block rounded-full bg-primary/20 px-4 py-1.5 text-xs font-semibold text-primary sm:mb-4 sm:text-sm">
+          <span className="mb-3 inline-flex items-center gap-2 rounded-full bg-primary/20 px-4 py-1.5 text-xs font-semibold text-primary sm:mb-4 sm:text-sm">
+            <Phone className="h-4 w-4" />
             Contact Us
           </span>
           <h1 className="mb-4 text-balance text-3xl font-bold tracking-tight text-background sm:mb-6 sm:text-4xl md:text-5xl lg:text-6xl">
